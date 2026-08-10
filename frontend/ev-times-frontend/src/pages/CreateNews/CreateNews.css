@@ -1,0 +1,131 @@
+.create-news-container{
+  width:90%;
+  max-width:900px;
+  margin:50px auto;
+}
+
+.create-news-card{
+  background:white;
+  padding:40px;
+  border-radius:24px;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.08);
+}
+
+.create-news-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:35px;
+  color:#0f172a;
+}
+
+.news-form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.news-form input,
+.news-form textarea{
+  width:100%;
+
+  padding:16px;
+
+  border:1px solid #d1d5db;
+  border-radius:12px;
+
+  font-size:16px;
+
+  outline:none;
+
+  transition:.3s;
+}
+
+.news-form input:focus,
+.news-form textarea:focus{
+  border-color:#10b981;
+
+  box-shadow:
+  0 0 0 4px rgba(16,185,129,.15);
+}
+
+.news-form textarea{
+  min-height:180px;
+  resize:vertical;
+}
+
+.create-btn{
+  background:#10b981;
+  color:white;
+
+  border:none;
+
+  padding:16px;
+
+  border-radius:12px;
+
+  font-size:18px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.create-btn:hover{
+  background:#059669;
+  transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+  .create-news-card{
+    padding:25px;
+  }
+
+  .create-news-title{
+    font-size:32px;
+  }
+
+}
+.news-form select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+}
+.news-form select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  background: white;
+  cursor: pointer;
+}
+
+.news-form select:focus {
+  border-color: #10b981;
+}
+.news-form select {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid #dfe6e9;
+  font-size: 16px;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.news-form select:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 4px rgba(16,185,129,.15);
+}

@@ -1,0 +1,340 @@
+/* ===========================================================
+   ADMIN DASHBOARD
+=========================================================== */
+
+.admin-dashboard{
+    width:90%;
+    max-width:1350px;
+    margin:50px auto;
+}
+
+.admin-dashboard h1{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:40px;
+    font-weight:700;
+}
+
+/* ===========================================================
+   DASHBOARD CARDS
+=========================================================== */
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.dashboard-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+}
+
+.dashboard-card h2{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.dashboard-card p{
+    font-size:46px;
+    color:#10b981;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.dashboard-card button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#10b981,#059669);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dashboard-card button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 22px rgba(16,185,129,.3);
+}
+
+/* ===========================================================
+   COMMON PANEL
+=========================================================== */
+
+.panel{
+    margin-top:40px;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.panel h2{
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+/* ===========================================================
+   PENDING NEWS
+=========================================================== */
+
+.pending-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    border:1px solid #ececec;
+    border-radius:15px;
+    margin-bottom:18px;
+    transition:.3s;
+}
+
+.pending-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.pending-left{
+    flex:1;
+}
+
+.pending-left h3{
+    font-size:24px;
+    margin-bottom:8px;
+    color:#222;
+}
+
+.pending-left p{
+    color:#666;
+    margin:4px 0;
+}
+
+.pending-left small{
+    color:#888;
+}
+
+.pending-actions{
+    display:flex;
+    gap:12px;
+}
+
+.approve-btn,
+.reject-btn{
+    min-width:120px;
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.approve-btn{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+.approve-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 18px rgba(16,185,129,.35);
+}
+
+.reject-btn{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.reject-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 18px rgba(239,68,68,.35);
+}
+
+.no-pending{
+    text-align:center;
+    color:#888;
+    padding:35px;
+    font-size:20px;
+}
+
+/* ===========================================================
+   BREAKING NEWS
+=========================================================== */
+
+.breaking-form{
+    display:grid;
+    grid-template-columns:1.5fr 1fr auto;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.breaking-form input{
+    height:48px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:0 14px;
+    font-size:15px;
+}
+
+.breaking-form input:focus{
+    outline:none;
+    border-color:#10b981;
+    box-shadow:0 0 0 3px rgba(16,185,129,.15);
+}
+
+.breaking-form button{
+    height:48px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(135deg,#10b981,#059669);
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    padding:0 24px;
+    transition:.3s;
+}
+
+.breaking-form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(16,185,129,.3);
+}
+
+/* ===========================================================
+   BREAKING ITEM
+=========================================================== */
+
+.breaking-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #eee;
+    padding:18px 0;
+}
+
+.breaking-title{
+    font-size:18px;
+    font-weight:500;
+}
+
+.breaking-actions{
+    display:flex;
+    gap:10px;
+}
+
+.breaking-actions button{
+    min-width:110px;
+    height:42px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.breaking-actions button:first-child{
+    background:#2563eb;
+}
+
+.breaking-actions button:first-child:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.breaking-actions .delete-btn{
+    background:#ef4444;
+}
+
+.breaking-actions .delete-btn:hover{
+    background:#dc2626;
+    transform:translateY(-3px);
+}
+
+/* ===========================================================
+   DARK MODE
+=========================================================== */
+
+body.dark .dashboard-card,
+body.dark .panel{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark .pending-card{
+    background:#243447;
+    border-color:#334155;
+}
+
+body.dark .pending-left h3{
+    color:white;
+}
+
+body.dark .pending-left p,
+body.dark .pending-left small{
+    color:#cbd5e1;
+}
+
+body.dark .breaking-form input{
+    background:#0f172a;
+    color:white;
+    border-color:#334155;
+}
+
+/* ===========================================================
+   MOBILE
+=========================================================== */
+
+@media(max-width:900px){
+
+    .dashboard-cards{
+        grid-template-columns:1fr;
+    }
+
+    .pending-card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .pending-actions{
+        width:100%;
+    }
+
+    .approve-btn,
+    .reject-btn{
+        flex:1;
+    }
+
+    .breaking-form{
+        grid-template-columns:1fr;
+    }
+
+    .breaking-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    .breaking-actions{
+        width:100%;
+    }
+
+    .breaking-actions button{
+        flex:1;
+    }
+}
+.breaking-list{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}

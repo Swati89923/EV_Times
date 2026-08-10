@@ -1,0 +1,26 @@
+.back-to-top{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background: #10b981;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.back-to-top:hover{
+  transform: translateY(-3px);
+}
+.scroll-top{
+  background:#10b981;
+  color:white;
+
+  box-shadow:
+  0 10px 30px rgba(16,185,129,.4);
+}

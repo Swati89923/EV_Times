@@ -1,0 +1,247 @@
+/* =========================================================
+   EV TIMES — DESIGN TOKENS
+   Signature idea: the site reads like a live instrument panel
+   for the EV world — a "current" readout (LiveTicker) instead
+   of a generic marquee, numbers set in mono like a dashboard.
+   ========================================================= */
+
+@import "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap";
+
+:root {
+  /* ---- type ---- */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --fs-2xs: 0.6875rem;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-3xl: 3rem;
+  --fs-4xl: 3.75rem;
+
+  /* ---- spacing scale ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  /* ---- shape / motion ---- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+
+  --container: 1280px;
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------------------------------------------------------
+   DARK THEME — "midnight circuit" (default)
+   --------------------------------------------------------- */
+:root,
+[data-theme="dark"] {
+  --bg: #0b0f14;
+  --bg-elevated: #12181f;
+  --bg-surface: #171e27;
+  --bg-surface-hover: #1d2530;
+  --border: #232b36;
+  --border-strong: #303b49;
+
+  --text-primary: #eef2f6;
+  --text-secondary: #9aa7b4;
+  --text-tertiary: #63707d;
+
+  --accent: #ffb238;       /* charge amber */
+  --accent-strong: #ffc669;
+  --accent-ink: #201400;   /* text on accent */
+  --current: #4c8dff;      /* current blue */
+  --live: #35d68f;         /* live/success green */
+  --danger: #ff5c72;
+
+  --accent-soft: rgba(255, 178, 56, 0.14);
+  --current-soft: rgba(76, 141, 255, 0.14);
+  --live-soft: rgba(53, 214, 143, 0.14);
+  --danger-soft: rgba(255, 92, 114, 0.14);
+
+  --skeleton-base: #171e27;
+  --skeleton-shine: #232b36;
+
+  color-scheme: dark;
+}
+
+/* ---------------------------------------------------------
+   LIGHT THEME — "overcast" (cool, not cream)
+   --------------------------------------------------------- */
+[data-theme="light"] {
+  --bg: #f2f4f7;
+  --bg-elevated: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f6f8fa;
+  --border: #e2e6ec;
+  --border-strong: #cbd2dc;
+
+  --text-primary: #101720;
+  --text-secondary: #4d5a68;
+  --text-tertiary: #7c8794;
+
+  --accent: #b96a00;
+  --accent-strong: #965600;
+  --accent-ink: #ffffff;
+  --current: #2258e0;
+  --live: #0c9463;
+  --danger: #d6304a;
+
+  --accent-soft: rgba(185, 106, 0, 0.1);
+  --current-soft: rgba(34, 88, 224, 0.1);
+  --live-soft: rgba(12, 148, 99, 0.1);
+  --danger-soft: rgba(214, 48, 74, 0.1);
+
+  --skeleton-base: #e9ecf1;
+  --skeleton-shine: #f5f6f9;
+
+  color-scheme: light;
+}
+
+/* ---------------------------------------------------------
+   RESET / BASE
+   --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+/* Visible keyboard focus everywhere — accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--current);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------
+   SHARED UTILITY CLASSES
+   --------------------------------------------------------- */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-5);
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 var(--sp-4);
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.section-title {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* app-wide layout offset so content clears the sticky navbar + ticker */
+.app-main {
+  min-height: 60vh;
+}

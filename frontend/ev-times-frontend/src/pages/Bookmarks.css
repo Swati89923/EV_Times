@@ -1,0 +1,29 @@
+.bookmarks-page {
+  padding: var(--sp-7) 0 var(--sp-9);
+}
+
+.bookmarks-header {
+  margin-bottom: var(--sp-6);
+}
+
+.bookmarks-header h1 {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  font-size: var(--fs-2xl);
+}
+
+.bookmarks-header h1 svg {
+  color: var(--accent);
+}
+
+.bookmarks-header p {
+  color: var(--text-secondary);
+  margin-top: var(--sp-2);
+}
+
+.bookmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--sp-5);
+}

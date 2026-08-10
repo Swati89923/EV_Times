@@ -1,0 +1,34 @@
+/* Preserved from the pre-redesign index.css so pages that haven't
+   been migrated to the CSS-variable token system yet keep working
+   correctly when dark mode is toggled. Safe to delete a block once
+   its corresponding component has been migrated to use var(--bg-*)
+   / var(--text-*) tokens directly. */
+
+body.dark .profile-card,
+body.dark .bookmark-card,
+body.dark .featured-container {
+  background: #1e293b;
+  color: white;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark,
+body.dark .home-news,
+body.dark .most-read,
+body.dark .top-headlines,
+body.dark .profile-container,
+body.dark .bookmarks-container {
+  background: #0f172a;
+  color: white;
+}
+
+body.dark a {
+  color: white;
+}

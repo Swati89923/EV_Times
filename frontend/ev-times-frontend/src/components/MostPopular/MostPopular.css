@@ -1,0 +1,214 @@
+.popular-section{
+  width:90%;
+  max-width:1300px;
+  margin:80px auto;
+}
+
+.popular-section h2{
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:30px;
+}
+
+/* LIST */
+
+.popular-list{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* CARD */
+
+.popular-item{
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  background:white;
+
+  padding:16px 20px;
+
+  border-radius:16px;
+
+  text-decoration:none;
+  color:inherit;
+
+  transition:.3s;
+
+  box-shadow:0 6px 20px rgba(0,0,0,.05);
+}
+
+.popular-item:hover{
+  transform:translateY(-3px);
+
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* RANK */
+
+.popular-rank{
+  min-width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:white;
+
+  font-size:14px;
+  font-weight:700;
+
+  flex-shrink:0;
+
+  background:#10b981;
+}
+
+.gold{
+  background:#f59e0b;
+}
+
+.silver{
+  background:#94a3b8;
+}
+
+.bronze{
+  background:#b45309;
+}
+
+/* IMAGE */
+
+.popular-thumb{
+  width:80px;
+  height:60px;
+
+  object-fit:cover;
+
+  border-radius:10px;
+
+  flex-shrink:0;
+}
+
+/* CONTENT */
+
+.popular-content{
+  flex:1;
+  min-width:0;
+}
+
+.popular-content h4{
+  font-size:18px;
+  font-weight:700;
+
+  line-height:1.5;
+
+  margin-bottom:8px;
+
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* META */
+
+.popular-meta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  flex-wrap:wrap;
+}
+
+.popular-meta span{
+  color:#64748b;
+  font-size:13px;
+}
+
+.popular-category{
+  background:#ecfdf5;
+  color:#10b981 !important;
+
+  padding:4px 10px;
+
+  border-radius:20px;
+
+  font-size:11px !important;
+  font-weight:700;
+}
+
+/* BADGE */
+
+.popular-badge{
+  position:absolute;
+
+  top:14px;
+  right:14px;
+
+  background:#fee2e2;
+  color:#ef4444;
+
+  padding:4px 10px;
+
+  border-radius:20px;
+
+  font-size:11px;
+  font-weight:700;
+}
+
+/* DARK MODE */
+
+body.dark .popular-item{
+  background:#1e293b;
+}
+
+body.dark .popular-content h4{
+  color:white;
+}
+
+body.dark .popular-meta span{
+  color:#cbd5e1;
+}
+
+body.dark .popular-category{
+  background:#064e3b;
+  color:#34d399 !important;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .popular-section h2{
+    font-size:32px;
+  }
+
+  .popular-item{
+    gap:12px;
+    padding:14px;
+  }
+
+  .popular-rank{
+    min-width:34px;
+    height:34px;
+    font-size:13px;
+  }
+
+  .popular-thumb{
+    width:65px;
+    height:50px;
+  }
+
+  .popular-content h4{
+    font-size:15px;
+  }
+
+  .popular-badge{
+    display:none;
+  }
+}
