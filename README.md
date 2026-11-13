@@ -164,6 +164,6 @@ This is a real checklist, not a formality — several of these matter a lot:
   the default Spring Boot test scaffold.
 - File uploads are local-disk only (see deployment note #6 above).
 
-## License
+## Contributing
 
-This project is for learning and personal use.
+Issues and pull requests are welcome. Please open an issue first to discuss larger changes.
