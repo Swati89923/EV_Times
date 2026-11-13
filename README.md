@@ -167,3 +167,7 @@ This is a real checklist, not a formality — several of these matter a lot:
 ## Contributing
 
 Issues and pull requests are welcome. Please open an issue first to discuss larger changes.
+
+## License
+
+This project is for learning and personal use.
