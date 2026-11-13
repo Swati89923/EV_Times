@@ -163,3 +163,7 @@ This is a real checklist, not a formality — several of these matter a lot:
 - No automated test suite exists for either the frontend or backend beyond
   the default Spring Boot test scaffold.
 - File uploads are local-disk only (see deployment note #6 above).
+
+## License
+
+This project is for learning and personal use.
